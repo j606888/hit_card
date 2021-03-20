@@ -20,7 +20,7 @@ class HomeController < ApplicationController
       case event.type
       when Line::Bot::Event::MessageType::Text
         result = LineBot.call(event.as_json['src'], client)
-        puts(result.error) unless result.success?
+        # puts(result.error) unless result.success?
       end
     end
 
@@ -30,9 +30,9 @@ class HomeController < ApplicationController
   private
   def client
     @client ||= Line::Bot::Client.new { |config| 
-      config.channel_id = Rails.application.credentials[:development][:line][:channel_id]
-      config.channel_secret = Rails.application.credentials[:development][:line][:channel_secret]
-      config.channel_token = Rails.application.credentials[:development][:line][:channel_token]
+      config.channel_id = Rails.application.credentials[Rails.env.to_sym][:line][:channel_id]
+      config.channel_secret = Rails.application.credentials[Rails.env.to_sym][:line][:channel_secret]
+      config.channel_token = Rails.application.credentials[Rails.env.to_sym][:line][:channel_token]
     }
   end
 
