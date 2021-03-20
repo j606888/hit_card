@@ -10,8 +10,9 @@ class HomeController < ApplicationController
     body = request.body.read
 
     signature = request.env['HTTP_X_LINE_SIGNATURE']
+    puts "Signature: #{signature}"
     unless client.validate_signature(body, signature)
-      return render josn: { status: 400 }
+      return render json: { status: 400 }
     end
 
     events = client.parse_events_from(body)
