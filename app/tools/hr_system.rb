@@ -39,8 +39,6 @@ class HrSystem
         req["Cookie"] = cookie.gsub(";,", ";")
       end
 
-      binding.pry
-
       resp.body
     end
   end

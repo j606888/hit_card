@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line_id: MyString
+  name: MyString
+  account: MyString
+  password: MyString
+  plan: 1
+  mode: 1
+  cookie: MyString
+
+two:
+  line_id: MyString
+  name: MyString
+  account: MyString
+  password: MyString
+  plan: 1
+  mode: 1
+  cookie: MyString
