@@ -1,0 +1,18 @@
+development: &development
+  database: hit_card_development
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  pool: 10
+  username: <%= Rails.application.credentials[:development][:database][:username] %>
+  password: <%= Rails.application.credentials[:development][:database][:password] %>
+
+test:
+  <<: *development
+  database: hit_card_test
+
+production:
+  <<: *development
+  database: hit_card_production
+  username: <%= Rails.application.credentials[:production][:database][:username] %>
+  password: <%= Rails.application.credentials[:production][:database][:password] %>
