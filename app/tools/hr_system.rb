@@ -42,6 +42,30 @@ class HrSystem
       resp.body
     end
 
+    def error_info(cookie)
+      params = {
+        file: 'hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg',
+        locale: 'TW',
+        init_func: '棉花糖首頁'
+      }
+      resp = Faraday.get(PATH, params) do |req|
+        req["Cookie"] = cookie.gsub(";,", ";")
+      end
+
+      resp = resp.body.to_s.force_encoding('UTF-8')
+
+      regex = /{\"overtimeError\":{.* data-overTime=/
+      short = resp.match(regex)[0]
+      short.gsub!("' data-overTime=", '')
+      data = JSON.parse(short)
+      result = data['attendError'].map do |date, value|
+        next if date == 'count'
+        "[#{date}] in: #{value['in']}, out: #{value['out']}, error: #{value['error']}"
+      end
+
+      result.compact.join("\n")
+    end
+
     def clock_time(cookie)
       params = {
         file: 'hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg',
@@ -52,13 +76,17 @@ class HrSystem
         req["Cookie"] = cookie.gsub(";,", ";")
       end
 
-      int_card_regx = /\"in_card\":\"\d+:\d+\"/
-      out_card_regx = /\"out_card\":\"\d+:\d+\"/
-      
-      in_hash = JSON.parse "{#{resp.body.match(int_card_regx)[0]}}"
-      out_hash = JSON.parse "{#{resp.body.match(out_card_regx)[0]}}"
+      resp = resp.body.to_s.force_encoding('UTF-8')
 
-      in_hash.merge(out_hash)
+      regex = /{\"other_card_record\":.*?}/
+      result = resp.match(regex)[0]
+      hash = JSON.parse(result)
+
+      [
+        "進卡：#{hash['in_card']}",
+        "出卡：#{hash['out_card']}",
+        "所有紀錄：#{hash['other_card_record'].split(' ').map { |time| time.insert(2, ':')}.join(', ')}"
+      ].join("\n")
     end
 
     def clock_in_list(cookie)

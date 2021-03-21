@@ -40,6 +40,10 @@ class LineUser < ApplicationRecord
     HrSystem.clock_time(self.cookie)
   end
 
+  def error_info
+    HrSystem.error_info(self.cookie)
+  end
+
   def random_location
     x = LOCARION_RANGE[:x_min] + (LOCARION_RANGE[:x_max] - LOCARION_RANGE[:x_min]) * rand()
     y = LOCARION_RANGE[:y_min] + (LOCARION_RANGE[:y_max] - LOCARION_RANGE[:y_min]) * rand()

@@ -31,6 +31,7 @@ class LineBot < ServiceCaller
         reply_message("Sorry, login failed. Please enter 'login' and try again.")
       end
     when 'login'
+      # binding.pry
       case @message
       when '打卡'
         result = @line_user.clock_in
@@ -40,11 +41,11 @@ class LineBot < ServiceCaller
           reply_message("Oops, clock in Failed...")
         end
       when '查看'
-        result = @line_user.clock_time
-        message = "Today's clock record：\n" + result.map { |key, value| "#{key}: #{value}"}.join("\n")
-        reply_message(message)
+        reply_message(@line_user.clock_time)
+      when '異常'
+        reply_message(@line_user.error_info)
       else
-        reply_message("Enter '打卡' to clock in\nEnter '查看' to check todays record")
+        reply_message("Enter '打卡' to clock in\nEnter '查看' to check todays record\nEnter '異常' to check error time")
       end
     end
   end

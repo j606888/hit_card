@@ -1,0 +1,796 @@
+"
+<!DOCTYPE html>\r\n
+<html>\r\n
+	<head>\r\n
+		<meta http-equiv=\"Expires\" content='0'>\r\n
+			<meta HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\r\n
+				<meta http-equiv=\"Pragma\"  content=\"no-cache\">\r\n
+					<meta http-equiv=\"Cache-Control\" content=\"no-cache\">\r\n
+						<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\r\n
+							<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0,viewport-fit=cover\">\r\n
+								<meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />\r\n
+								<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\" />\r\n
+								<link rel=\"icon\">\r\n
+									<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cmc.css\" />\r\n
+									<script type=\"text/javascript\" src=\"/css/cmc.js\"></script>\r\n
+									<link rel=\"stylesheet\" href=\"/css/MX/template.css\" type='text/css' />\r\n\r\n
+									<script type=\"text/javascript\" src=\"/echarts.js\"></script>\r\n\r\n
+									<script type=\"text/javascript\" src=\"/hrmairw/hrmair.js\"></script>\r\n\r\n
+									<script type=\"text/javascript\"> function dynamiccontent(element,content){element.innerHTML=content;} function createFragment(rng,content){return rng.createContextualFragment(content);} </script>\r\n
+									<TITLE>HR System</TITLE>\r\n
+								</head>\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+								<body data-front=\"Y\">\r\n    \r\n    
+									<script>\r\n        var MXDATA = JSON.stringify({\"systemUser\":\"1070055\",\"userFavoriteInfo\":[],\"translate\":{\"SHOW\":\"N\"},\"systemIP\":\"182.234.128.14\",\"language\":{\"Language\":[],\"LanguageName\":[]},\"existsOnlineHelp\":\"Y\"});\r\n    </script>\r\n    
+									<script src=\"/MX.js\"></script>\r\n    
+									<script src=\"/css/MX/template.js\"></script>\r\n    
+									<div id=\"header\" data-key=\"hrmairw\">\r\n        
+										<div id=\"nav\">\r\n            
+											<span class=\"logobox\">
+												<a class=\"logo\" href=\"/servlet/jform?file=hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg\">HR System</a>
+											</span>\r\n            
+											<span>
+												<SCRIPT>\r\nfunction changeDisplay(no)\r\n{\r\n\tvar sb = document.getElementById('sb_'+no);\r\n\tvar temp1 = '';\r\n\tif (sb==null) return;\tif (sb.style.display!='none')\r\n\t{\r\n\t\ttry{ temp1=document.jform.menu_display_flag.value.substring(0,eval(no))+'1'+document.jform.menu_display_flag.value.substring(eval(no)+1,document.jform.menu_display_flag.value.length);
+      } catch(e){}\r\n\t\tsb.style.display = 'none';\r\n\tvar sb1 = document.getElementById('lv_icon'+no);\r\n\tsb1.style.backgroundImage='url(/css/MX/closed.gif)';\r\n\t
+    } else {\r\n\t\ttry{ temp1=document.jform.menu_display_flag.value.substring(0,eval(no))+'0'+document.jform.menu_display_flag.value.substring(eval(no)+1,document.jform.menu_display_flag.value.length);
+      } catch(e){}\r\n
+\t\tsb.style.display = '';\r\n\tvar sb1 = document.getElementById('lv_icon'+no);\r\n\tsb1.style.backgroundImage='url(/css/MX/opened.gif)';\r\n\t
+    }\r\n\tdocument.jform.menu_display_flag.value=temp1;
+  }\r\nfunction change_emaker_function(value,value2,stp) {  if(stp==null) stp='0';  location.href=\"/servlet/jform?\"+(stp=='0'?'':\"em_step=\"+stp+\"&\")+\"file=hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg\"+(value==''?'':\"&enc=\"+value)+value2+(jform.menu_display_flag.value==''?'':\"&menu_display_flag=\"+jform.menu_display_flag.value);}\r\n</SCRIPT>\r\n
+												<div class=\"main_menu\" >\r\n
+													<ul >\r\n\t
+														<li  class=\"lv1 cmc-selected cmc-selected-item\" >
+															<span onClick=\"change_emaker_function('','&locale=TW&init_func=棉花糖首頁');\">棉花糖首頁</span>
+														</li>\r\n\t
+														<li  class=\"lv1\" >
+															<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=人事');\">人事</span>\r\n\t
+															<ul>\r\n\t\t
+																<li  class=\"lv2\" >
+																	<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A1.個人資訊區');\">A1.個人資訊區</span>
+																</li>\r\n\t\t
+																<li  class=\"lv2\" >
+																	<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A2.夥伴資料查詢');\">A2.夥伴資料查詢</span>
+																</li>\r\n\t\t
+																<li  class=\"lv2\" >
+																	<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A3.個人資料維護');\">A3.個人資料維護</span>
+																</li>\r\n\t\t
+																<li  class=\"lv2\" >
+																	<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A4.行政服務申請');\">A4.行政服務申請</span>
+																</li>\r\n\t\t
+																<li  class=\"lv2\" >
+																	<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A7.人事異動申請');\">A7.人事異動申請</span>
+																</li>\r\n\t\t
+																<li  class=\"lv2\" >
+																	<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A11.文件下載');\">A11.文件下載</span>
+																</li>\r\n\t\t
+																<li  class=\"lv2\" >
+																	<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A13.設定我的最愛');\">A13.設定我的最愛</span>
+																</li>\r\n\t\t
+																<li  class=\"lv2\" >
+																	<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A14.個人薪資查詢');\">A14.個人薪資查詢</span>\r\n\t\t
+																	<ul>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A14.1.薪資條查詢');\">A14.1.薪資條查詢</span>
+																		</li>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A14.2.每月薪資給付明細(加班／請假)');\">A14.2.每月薪資給付明細(請假)</span>
+																		</li>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A14.3.獎金條查詢');\">A14.3.獎金條查詢</span>
+																		</li>\r\n\t\t
+																	</ul>\r\n
+
+																</li>\r\n\t
+															</ul>\r\n
+														</li>\r\n\t
+														<li  class=\"lv1\" >
+															<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=考勤');\">考勤</span>\r\n\t
+															<ul>\r\n\t\t
+																<li  class=\"lv2\" >
+																	<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.請假／出差作業');\">B2.請假／出差作業</span>\r\n\t\t
+																	<ul>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.1.請假單');\">B2.1.請假單</span>
+																		</li>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.6.年度請假統計表');\">B2.6.年度請
+假統計表</span>
+																		</li>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.7.特休未休統計表');\">B2.7.特休未休統計表</span>
+																		</li>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.8.加班補休結算明
+細表');\">B2.8.加班補休結算明細表</span>
+																		</li>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.12.出差申請單');\">B2.12.出差申請單</span>
+																		</li>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.13.出差時程變更申請單');\">B2.13.出差時程變更申請單</span>
+																		</li>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.14.差旅費報支');\">B2.14.差旅費報支</span>
+																		</li>\r\n\t\t
+																	</ul>\r\n
+																</li>\r\n\t\t
+																<li  class=\"lv2\" >
+																	<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B3.加班／刷卡作業');\">B3.加班／刷卡作業</span>\r\n\t\t
+																	<ul>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B3.3.事後直接加班單');\">B3.3.事後直接加班單</span>
+																		</li>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B3.7.線上補刷卡');\">B3.7.線上補刷卡</span>
+																		</li>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B3.8.線上簽到簽退');\">B3.8.線上簽到簽退</span>
+																		</li>\r\n\t\t
+																	</ul>\r\n
+																</li>\r\n\t\t
+																<li  class=\"lv2\" >
+																	<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B4.出勤報表');\">B4.出勤報表</span>\r\n\t\t
+																	<ul>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B4.1.考勤彙總表');\">B4.1.考勤彙總表</span>
+																		</li>\r\n\t\t\t
+																		<li  class=\"lv3\" >
+																			<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B4.6.線上簽到退一覽表');\">B4.6.線上簽到退一覽表</span>
+																		</li>\r\n\t\t\t<
+li  class=\"lv3\" >
+																		<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B4.8.單據銷單作業');\">B4.8.單據銷單作業</span>
+																	</li>\r\n\t\t\t
+																	<li  class=\"lv3\" >
+																		<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B4.9.簽核單據抽單作業');\">B4.9.簽核單據抽單作業</span>
+																	</li>\r\n\t\t
+																</ul>\r\n
+															</li>\r\n\t
+														</ul>\r\n
+													</li>\r\n\t
+													<li  class=\"lv1\" >
+														<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=簽核');\">簽核</span>\r\n\t
+														<ul>\r\n\t\t
+															<li  class=\"lv2\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CA4.行政服務單簽核');\">CA4.行政服務單簽核</span>
+															</li>\r\n\t\t
+															<li  class=\"lv2\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CA7.人事異動單簽
+核');\">CA7.人事異動單簽核</span>
+															</li>\r\n\t\t
+															<li  class=\"lv2\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CB2.1.請假單簽核');\">CB2.1.請假單簽核</span>
+															</li>\r\n\t\t
+															<li  class=\"lv2\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CB2.11.出差
+單簽核');\">CB2.11.出差單簽核</span>
+															</li>\r\n\t\t
+															<li  class=\"lv2\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CB2.12.出差時程變更單簽核');\">CB2.12.出差時程變更單簽核</span>
+															</li>\r\n\t\t
+															<li  class=\"lv2\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CB2.13.差旅報支簽核');\">CB2.13.差旅報支簽核</span>
+															</li>\r\n\t\t
+															<li  class=\"lv2\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CB3.2.加班單簽核');\">CB3.2.加班單簽核</span>
+															</li>\r\n\t\t
+															<li  class=\"lv2\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CB3.7.補刷卡簽核');\">CB3.7.補刷卡簽核</span>
+															</li>\r\n\t
+														</ul>\r\n
+													</li>\r\n
+												</ul>\r\n
+											</div>\r\n
+										</span>\r\n            
+										<span id=\"parentmenu\">
+											<SCRIPT>function change_emaker_function(value,value2,stp) {  if(stp==null) stp='0';  location.href=\"/servlet/jform?\"+(stp=='0'?'':\"em_step=\"+stp+\"&\")+\"file=hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg\"+(value==''?'':\"&enc=\"+value)+value2+(jform.menu_display_flag.value==''?'':\"&menu_display_flag=\"+jform.menu_display_flag.value);}</SCRIPT>
+											<p class=\"menu1\">
+												<a  class=\"menu1_selected\"  id=\"menu1\" href=\"#\" onClick=\"change_emaker_function('','&locale=TW&init_func=棉花糖首頁');\">
+													<span>
+														<span>
+															<span>棉花糖首頁</span>
+														</span>
+													</span>
+												</a>\r\n
+												<SPAN class=\"menu1_separator\" style=\"border-left:solid 2px #c0c0c0;width:2px;\"></SPAN>
+												<a  class=\"menu1_a\"  id=\"menu1\" href=\"#\" onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=人事')
+;\">
+													<span>
+														<span>
+															<span>人事</span>
+														</span>
+													</span>
+												</a>\r\n
+												<SPAN class=\"menu1_separator\" style=\"border-left:solid 2px #c0c0c0;width:2px;\"></SPAN>
+												<a  class=\"menu1_a\"  id=\"menu1\" href=\"#\" onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=考勤');\">
+													<span>
+														<span>
+															<span>考勤</span>
+														</span>
+													</span>
+												</a>\r\n
+												<SPAN class=\"menu1_separator\" style=\"border-left:solid 2px #c0c0c0;width:2px;\"></SPAN>
+												<a  class=\"menu1_a\"  id=\"menu1\" href=\"#\" onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=簽核');\">
+													<span>
+														<span>
+															<span>簽核</span>
+														</span>
+													</span>
+												</a>\r\n
+												<SPAN class=\"menu1_separator\" style=\"border-left:solid 2px #c0c0c0;width:2px;\"></SPAN>
+											</p>
+										</span>            \r\n            
+										<div id=\"path\">\r\n                
+											<span>
+												<span class=\"path_menu_box\">
+													<a class=\"path_menu path_menu0_a\" id=\"menu0\" href=\"#\" onClick=\"change_emaker_function('','&locale=TW');\">
+														<span>
+															<span>首頁</span>
+														</span>
+													</a>
+												</span>
+											</span>\r\n                
+											<span>\r\n                    
+												<span id=\"msg\">\r\n                        
+													<div></div>\r\n                        
+													<span></span>\r\n                    
+												</span>\r\n                    
+												<span id=\"zoom\">\r\n                        
+													<div></div>\r\n                        
+													<span></span>\r\n                    
+												</span>\r\n                    
+												<span id=\"fullscreen\">\r\n                        
+													<div></div>\r\n                        
+													<span></span>\r\n                    
+												</span>\r\n                    
+												<span id=\"leftmenu\">\r\n                        
+													<div></div>\r\n                    
+												</span>\r\n                    
+												<span id=\"color\">\r\n                        
+													<div></div>\r\n                    
+												</span>\r\n                    
+												<span id=\"setting\">\r\n                        
+													<div></div>\r\n                        
+													<span>\r\n                            
+														<span>
+															<a id=\"agent_manage\" href=\"/servlet/jform?em_step=agent&file=hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg&locale=TW\" target=\"acc_manage\">簽核代理人設定</a>
+														</span>\r\n                            
+														<span></span>\r\n                            
+														<span id=\"language\"></span>\r\n                            
+														<span>
+															<a id=\"logout\" onClick=\"window.location='/servlet/jform?em_step=logout&file=hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg&locale=TW'\" >登出</a>
+														</span>\r\n                        
+													</span>\r\n                    
+												</span>\r\n                
+											</span>\r\n                \r\n                
+											<span id=\"searchbar\"></span>\r\n\r\n                
+											<span id=\"user\">\r\n                    
+												<span>\r\n                        
+													<span>IP : </span>\r\n                        
+													<span id=\"userIp\">182.234.128.1
+4</span>\r\n                    
+												</span>\r\n                    
+												<span>\r\n                        
+													<span>ID : </span>\r\n                        
+													<span id=\"userId\">1070055</span>\r\n                        
+													<span>李彥增</span>\r\n                    
+												</span>\r\n                    
+												<span></span>\r\n                
+											</span>\r\n            
+										</div>\r\n        
+									</div>\r\n    
+								</div>\r\n\r\n    
+								<div id=\"section\" data-photo=\"\">\r\n        
+									<div class=\"menu\"></div>\r\n        
+									<div class=\"back\"></div>\r\n        
+									<SCRIPT>\r\nfunction changeDisplay(no)\r\n{\r\n\tvar sb = document.getElementById('sb_'+no);\r\n\tvar temp1 = '';\r\n\tif (sb==null) return;\tif (sb.style.display!='none')\r\n\t{\r\n\t\ttry{ temp1=document.jform.menu_display_flag.value.substring(0,eval(no))+'1'+document.jform.menu_display_flag.value.substring(eval(no)+1,document.jform.menu_display_flag.value.length);
+          } catch(e){}\r\n\t\tsb.style.display = 'none';\r\n\tvar sb1 = document.getElementById('lv_icon'+no);\r\n\tsb1.style.backgroundImage='url(/css/MX/closed.gif)';\r\n\t
+        } else {\r\n\t\ttry{ temp1=document.jform.menu_display_flag.value.substring(0,eval(no))+'0'+document.jform.menu_display_flag.value.substring(eval(no)+1,document.jform.menu_display_flag.value.length);
+          } catch(e){}\r\n\t\tsb.style.display = '';\r\n\tvar sb1 = document.getElementById('lv_icon'+no);\r\n\tsb1.style.backgroundImage='url(/css/MX/opened.gif)';\r\n\t
+        }\r\n\tdocument.jform.menu_display_flag.value=temp1;
+      }\r\nfunction change_emaker_function(value,value2,stp) {  if(stp==null) stp='0';  location.href=\"/servlet/jform?\"+(stp=='0'?'':\"em_step=\"+stp+\"&\")+\"file=hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg\"+(value==''?'':\"&enc=\"+value)+value2+(jform.menu_display_flag.value==''?'':\"&menu_display_flag=\"+jform.menu_display_flag.value);}\r\n</SCRIPT>\r\n
+									<div class=\"main_menu\" >\r\n
+										<ul >\r\n\t
+											<li  class=\"lv1 cmc-selected cmc-selected-item\" >
+												<span onClick=\"change_emaker_function('','&locale=TW&init_func=棉花糖首頁');\">棉花糖首頁</span>
+											</li>\r\n\t
+											<li  class=\"lv1\" >
+												<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=人事');\">人事</span>\r\n\t
+												<ul>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A1.個人資訊區');\">A1.個人資訊區</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A2.夥伴資料查詢');\">A2.夥伴資料查詢</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A3.個人資料維護');\">A3.個人資料維護</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emake
+r_function('','&file1=hrm8w.pkg&locale=TW&init_func=A4.行政服務申請');\">A4.行政服務申請</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A7.人事異動申請');\">A7.人事異動申請</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A11.文件下載');\">A11.文件下載</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A13.設定我的最愛');\">A13.設定我的最愛</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A14.個人薪資查詢');\">A14.個人薪資查詢</span>\r\n\t\t
+														<ul>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A14.1.薪資條查詢');\">A14.1.薪資條查詢</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A14.2.每月薪資給付明細(加班／請假)');\">A14.2.每月薪資給付明細(請假)</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=A14.3.獎金條查詢');\">A14.3.獎金條查詢</span>
+															</li>\r\n\t\t
+														</ul>\r\n
+													</li>\r\n\t
+												</ul>\r\n
+											</li>\r\n\t
+											<li  class=\"lv1\" >
+												<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=考勤');\">考勤</span>\r\n\t
+												<ul>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.請假／出差作業');\">B2.請假／出差作業</span>\r\n\t\t
+														<ul>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.1.請假單');\">B2.1.請假單</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.6.年度請假統計表');\">B2.6.年度請假統計表</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.7.特休未休統計表');\">B2.7.特休未休統計表</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.8.加班補休結算明細表');\">B2.8.加班補休結算明細表</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.12.出差申請單');\">B2.12.出差申請單</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B2.13.出差時程變更申請單');\">B2.13.出差時程變更申請單</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&
+init_func=B2.14.差旅費報支');\">B2.14.差旅費報支</span>
+															</li>\r\n\t\t
+														</ul>\r\n
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B3.加班／刷卡作業');\">B3.加班／刷卡作業</span>\r\n\t\t
+														<ul>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B3.3.事後直接加班單');\">B3.3.事後直接加班單</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B3.7.線上補刷卡');\">B3.7.線上補刷卡</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B3.8.線上簽到簽退');\">B3.8.線上簽到簽退</span>
+															</li>\r\n\t\t
+														</ul>\r\n
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B4.出勤報表');\">B4.出勤報表</span>\r\n\t\t
+														<ul>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B4.1.考勤彙總表');\">B4.1.考勤彙總表</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B4.6.線上簽到退一覽表');\">B4.6.線上簽到退一覽表</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B4.8.單據銷單作業');\">B4.8.單據銷單作業</span>
+															</li>\r\n\t\t\t
+															<li  class=\"lv3\" >
+																<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=B4.9.簽核單據抽單作業');\">B4.9.簽核單據抽單作業</span>
+															</li>\r\n\t\t
+														</ul>\r\n
+													</li>\r\n\t
+												</ul>\r\n
+											</li>\r\n\t
+											<li  class=\"lv1\" >
+												<span ondblclick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=簽核');\">簽核</span>\r\n\t
+												<ul>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CA4.行政服務單簽核');\">CA4.行政服務單簽核</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CA7.人事異動單簽核');\">CA7.人事異動單簽核</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CB2.1.請假單簽核');\">CB2.1.請假單簽核</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CB2.11.出差單簽核');\">CB2.11.出差單簽核</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CB2.12.出差時程變
+更單簽核');\">CB2.12.出差時程變更單簽核</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func
+=CB2.13.差旅報支簽核');\">CB2.13.差旅報支簽核</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CB3.2.加班單簽核');\">CB3.2.加班單簽核</span>
+													</li>\r\n\t\t
+													<li  class=\"lv2\" >
+														<span onClick=\"change_emaker_function('','&file1=hrm8w.pkg&locale=TW&init_func=CB3.7.補刷卡簽核');\">CB3.7.補刷卡簽核</span>
+													</li>\r\n\t
+												</ul>\r\n
+											</li>\r\n
+										</ul>\r\n
+									</div>\r\n\r\n        
+									<div id=\"main_body\">\r\n            
+										<iframe marginwidth=\"0\" marginheight=\"0\" scrolling=\"auto\" frameborder=1 align=\"left\" valign=\"top\" id=\"EMAKER_ASSIST_PANEL\" src=\"about:blank\" name=\"EMAKER_ASSIST_PANEL\" STYLE=\"background-color:#fff;POSITION:absolute;TOP:0px;LEFT:0px;WIDTH:1px;HEIGHT:1px;Z-INDEX:9999;visibility:hidden;\"  ></iframe>\r\n
+										<div id=\"EMAKER_QUERY_PANEL\" class=\"x-hidden\"  style=\"display:none;\">
+											<span class=\"cmc-window-header0\"></span>
+											<span class=\"cmc-window-header\">
+												<span class=\"cmc-window-header-box\">
+													<span class=\"cmc-window-header-title-left\"></span>
+													<span class=\"cmc-window-header-title\">查詢</span>
+													<span class=\"cmc-window-header-title-right\"></span>
+												</span>
+											</span>
+											<span class=\"cmc-window-header2\"></span>
+											<span class=\"cmc-window-box0\"></span>
+											<span id=\"EMAKER_QUERY_PANEL_BOX\" class=\"cmc-window-box\">
+												<div id=\"EMAKER_QUERY_PANEL_TAB\" class=\"cmc-tab\">
+													<div id=\"EMAKER_QUERY_PANEL_INPUT\"   class=\"cmc-hide-display\" style=\"overflow:hidden;\"></div>
+													<div id=\"EMAKER_QUERY_PANEL_LIST\"  class=\"cmc-hide-display\"   style=\"width:100%;height:100%;border:0px;\" >
+														<div id=\"EMAKER_QUERY_PANEL_LIST_CAPTION\"  style=\"text-align:center;width:100%;\" ></div>
+														<div id=\"EMAKER_QUERY_PANEL_LIST_TABLE\"  style=\"width:100%;height:100%;\"></div>
+													</div>
+													<div id=\"EMAKER_QUERY_PANEL_FLOWHIS\"  class=\"cmc-hide-display\"   style=\"width:100%;height:100%;border:solid 0px;overflow:auto;\" ></div>
+												</div>
+											</span>
+											<span class=\"cmc-window-box2\"></span>
+											<span class=\"cmc-window-footer0\"></span>
+											<span class=\"cmc-window-footer\"></span>
+											<span class=\"cmc-window-footer2\"></span>
+											<span class=\"cmc-window-bottom0\"></span>
+											<span class=\"cmc-window-bottom\"></span>
+											<span class=\"cmc-window-bottom2\"></span>
+										</div>\r\n
+										<div id=\"form_body\" >\r\n\r\n
+											<form name=\"jform\" id=\"jform\"   class=\"cmc-form\" action=\"/servlet/jform\" method=post >
+												<input type=hidden name=locale value='TW'>\r\n
+													<input type=hidden name=FUNCTION_NAME value=\"棉花糖首頁\">\r\n
+														<input type=hidden name=act value=\"\">\r\n
+															<input type=hidden name=init_func value=\"\">\r\n
+																<input type=hidden name=flow_approve value=\"\">\r\n
+																	<input type=hidden name=buttonid value=\"\">\r\n
+																		<input type=hidden name=buttonlink value=\"\">\r\n
+																			<input type=hidden name=fr
+omlink value=\"\">\r\n
+																				<input type=hidden name=table_data value=\"\">\r\n
+																					<input type=hidden name=form_target value=\"\">\r\n
+																						<input type=hidden name=\"menu_display_flag\" value=\"\">\r\n
+																							<input type=hidden name=em_step value=\"0\">\r\n
+																								<input type=hidden name=em_POSITION value=\"1\">\r\n
+																									<input type=hidden name=file value=\"hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg\">\r\n
+																										<input type=hidden name=enc value=\"93d23f3a4c4d3f2c555e495e114a4b565311775e4c574b5e5d535a2c84301a1e75db873c3f3d793f3553505e5b795e5c4b504d763f364b574d5a4c5750535b474f007f3f3f3f3f3f3748373f3f3f343f3f3f3d4b3f3b515e525a4b3f30d99cb6d7b58ed88ca9d699a9d69fbe4b3f3d565b4c4d3f2e555e495e11535e51581176514b5a585a4d2ddd9f9bc8beb8073d3f3e763f3a495e534a5a474d3f2f555e495e11535e515811714a525d5a4db993aa2234abdfb43d3f3f474f3f3f3f3e47\">\r\n
+																											<div class=\"cmc-container A1\">\r\n    
+																												<div id=\"A1\">\r\n        
+																													<span id=\"more\">• • •</span>\r\n        
+																													<span id=\"titlemenu\" data-info='{\"result\":[{\"pinIndex\":0,\"pin\":true,\"key\":\"1\",\"icon\":\"/css/hrmCotton/assets/images/p_icon4_48-8.png\",\"link\":\"/punch\",\"title\":\"我要打卡\"},{\"pinIndex\":1,\"pin\":true,\"key\":\"2\",\"icon\":\"/css/hrmCotton/assets/images/p1_icon1_48-8.png\",\"link\":\"/workcard\",\"title\":\"我要補刷\"},{\"pinIndex\":2,\"pin\":true,\"key\":\"3\",\"icon\":\"/css/hrmCotton/assets/images/p_icon3_48-8.png\",\"link\":\"/vacation\",\"title\":\"我要請假\"}]}'>\r\n            
+																														<div id=\"titlebox\"></div>\r\n        
+																													</span>\r\n\r\n        
+
+
+																													<div id=\"information\" data-info='{\"overtimeError\":{\"count\":[]},\"attendError\":{\"20210318\":{\"in\":\"0825\",\"error\":\"曠職7.5小時\",\"out\":\"\",\"unsign\":false},\"20210317\":{\"in\":\"0900\",\"error\":\"早退\",\"out\":\"1824\",\"unsign\":false},\"count\":[\"20210317\",\"20210318\",\"20210319\"],\"20210319\":{\"in\":\"0827\",\"error\":\"曠職4.5小時\",\"out\":\"1341\",\"unsign\":false}},\"attendDate\":{\"attend\":[\"20210302\",\"20210303\",\"20210304\",\"20210305\",\"20210308\",\"20210309\",\"20210310\",\"20210311\",\"20210312\",\"20210315\",\"20210316\",\"20210317\",\"20210318\",\"20210319\",\"20210322\",\"20210323\",\"20210324\",\"20210325\",\"20210326\",\"20210329\",\"20210330\",\"20210331\"],\"dateOff\":[\"20210301\",\"20210306\",\"20210307\",\"20210313\",\"20210314\",\"20210320\",\"20210321\",\"20210327\",\"20210328\"]}}' data-overTime='{\"show\":false,\"button\":[],\"content\":[]}' data-overTimeAlert='{\"show\":false,\"button\":[],\"content\":[]}'>\r\n            
+																														<div id=\"infoT\">\r\n                
+																															<span id=\"infoTL\">\r\n\t\t\t\t
+																																<!--\r\n                    <span id=\"photo\" title=\"個人資料修改\" data-info=''>\r\n\t\t\t\t\t\t<span id=\"homepage\" t
+itle=\"設為首頁\"></span>\r\n\t\t\t\t\t</span>-->\r\n\t\t\t\t\t\r\n\t\t\t\t\t
+																																<span id=\"photo\" data-info=\"\">\r\n\t\t\t\t\t\t
+																																	<span id=\"homepage\" title=\"
+設為首頁\"></span>\r\n\t\t\t\t\t
+																																</span>\r\n                    \r\n                    
+																																<span id=\"userinfo\" data-info='{\"getUserName\":\"李彥增\",\"getUserPossieName\":\"工程師\",\"getUserDeptName\":\"雲端服務開發部\",\"getUserEngName\":\"\"}'>\r\n                        
+																																	<div>\r\n                            
+																																		<span></span>\r\n                            
+																																		<span></span>\r\n                        
+																																	</div>\r\n                        
+																																	<div></div>\r\n                        
+																																	<div>\r\n                            
+																																		<span></span>\r\n                        
+																																	</div>\r\n                    
+																																</span>\r\n                    
+																																<div id=\"vacation\" data-info='{\"canUseAnnualName\":\"特休可用時數\",\"unit\":\"小時\",\"canUseAnnual\":\"40.0\",\"totalAnnualName\":\"特休時數\",\"totalAnnual\":\"88.0\"}'>\r\n                        
+																																	<span>
+																																		<div id=\"have\"></div>
+																																		<div></div>
+																																	</span>\r\n                        
+																																	<span>
+																																		<div id=\"remain\"></div>
+																																		<div></div>
+																																	</span>\r\n                    
+																																</div>\r\n                
+																															</span>\r\n                
+																															<span id=\"infoTC\">\r\n                    
+																																<span id=\"incard\">\r\n                        
+																																	<span>進卡</span>\r\n                        
+																																	<div></div>\r\n                    
+																																</span>\r\n                    
+																																<span id=\"outcard\">\r\n                        
+																																	<span>出卡</span>\r\n                        
+																																	<div></div>\r\n                    
+																																</span>\r\n                    
+																																<div id=\"class\">\r\n                        
+																																	<div id=\"class_name\"></div>\r\n                        
+																																	<div>\r\n                            
+																																		<span id=\"class_stime\"></span>\r\n                            
+																																		<span id=\"class_etime\"></span>\r\n                        
+																																	</div>\r\n                    
+																																</div>\r\n                
+																															</span>\r\n                
+																															<span id=\"infoTR\">\r\n                    
+																																<span id=\"overtimeError\">\r\n                        
+																																	<div>加班異常</div>\r\n                        
+																																	<div>\r\n                            
+																																		<div></div>\r\n                        
+																																	</div>\r\n                        
+																																	<div></div>\r\n                    
+																																</span>\r\n                    
+																																<span id=\"attendanceError\">\r\n                        
+																																	<div>考勤異常</div>\r\n                        
+																																	<div>\r\n                            
+																																		<div></div>\r\n                        
+																																	</div>\r\n                        
+																																	<div></div>\r\n                    
+																																</span>\r\n\r\n                    
+																																<span id=\"attendanceDay\">\r\n                        
+																																	<div>工作天數</div>\r\n                        
+																																	<div>\r\n                            
+																																		<div></div>\r\n                        
+																																	</div>\r\n
+             
+																																	<div></div>\r\n                    
+																																</span>\r\n\r\n                    
+																																<span id=\"signOff\" data-info='{\"result\":\"success\",\"status\":\"success\",\"status_name\":{},\"type\":\"success\",\"message\":\"查詢成功簽核資料\",\"total\":{},\"functionName\":[]}'>\r\n                        
+																																	<div>簽核單據</div>\r\n                        
+																																	<div>\r\n                            
+																																		<div></div>\r\n                        
+																																	</div>\r\n                        
+																																	<div></div>\r\n                    
+																																</span>\r\n                
+																															</span>\r\n            
+																														</div>\r\n            
+																														<div id=\"infoB\">\r\n                
+																															<span class=\"CA\" data-info='{\"not_approve_vaction\":{\"name\":\"個人在途請假單\",\"data\":[]},\"travel\":{\"name\":\"個人出差單\",\"data\":[]},\"warnPunch\":{\"status\":false},\"card\":{\"name\":\"個人刷卡\",\"data\":[{\"other_card_record\":\"1010 1027 1055 1106 1107 1115\",\"out_card\":\"11:15\",\"status\":\"\",\"in_card\":\"10:10\"}]},\"abnormal\":{\"name\":\"遲到早退曠職\",\"data\":[]},\"vaction\":{\"name\":\"個人請假單\",\"data\":[]},\"overtime\":{\"name\":\"加班\",\"data\":[]},\"attend\":{\"name\":\"個人出勤\",\"data\":[{\"class_stime\":\"\",\"class_name\":\"例假日\",\"class_etime\":\"\"}]},\"overtimeabnormal\":{\"name\":\"個人加班異常表\",\"data\":[]}}'>\r\n                    
+																																<div class=\"jump\">\r\n                        
+																																	<span class=\"prevM\">＜</span>\r\n                        
+																																	<span class=\"date\"></span>\r\n                        
+																																	<span class=\"nextM\">＞</span>\r\n                    
+																																</div>\r\n                    
+																																<table>\r\n                        
+																																	<tr>\r\n                            
+																																		<th>日</th>\r\n                            
+																																		<th>一</th>\r\n                            
+																																		<th>二</th>\r\n                            
+																																		<th>三</th>\r\n                            
+																																		<th>四</th>\r\n                            
+																																		<th>五</th>\r\n                            
+																																		<th>六</th>\r\n                        
+																																	</tr>\r\n                        
+																																	<tr>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                        
+																																	</tr>\r\n                        
+																																	<tr>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                        
+																																	</tr>\r\n                        
+																																	<tr>\r\n                            
+																																		<t
+d>
+																																		</td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                        
+																																	</tr>\r\n                        
+																																	<tr>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                        
+																																	</tr>\r\n                        
+																																	<tr>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                        
+																																	</tr>\r\n                        
+																																	<tr>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                            
+																																		<td></td>\r\n                        
+																																	</tr>\r\n                    
+																																</table>\r\n                
+																															</span>\r\n                
+																															<span id=\"news\">\r\n                    
+																																<div id=\"newsTitle\">公告訊息</div>\r\n                    
+																																<div id=\"newsInfo\">
+																																	<div>\t
+																																		<span>\t\t
+																																			<img src=\"/servlet/jform?step=download&file=hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg&filename=babylon%2Ffiles%2FB.2.%5Cu516c%5Cu544a%5Cu5167%5Cu5bb9%5Cu7dad%5Cu8b77%2F1608099164029_%5Cu87a2%5Cu5e55%5Cu64f7%5Cu53d6%5Cu756b%5Cu9762+2020-12-16+141224.jpg\">\t
+																																			</span>\t
+																																			<span>\t\t
+																																				<div>Hi all,
+																																					<br>在使用HR系統上有任何不順、卡卡的地方嗎? 
+																																						<br>歡迎參閱附件『操作手冊』
+																																							<br>你可能會有的疑問，上面通通都有解答喔~
+																																								<br>
+																																									<br>如果看了還是霧煞煞，歡迎隨時詢問莉綺、佳蓉
+																																										<br>我們很樂意為
+你服務～
+																																										</div>\t
+																																									</span>\t
+																																									<div>\t\t
+																																										<a href=\"/servlet/jform?step=download&file=hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg&filename=babylon%2Ffiles%2FB.2.%5Cu516c%5Cu544a%5Cu5167%5Cu5bb9%5Cu7dad%5Cu8b77%2F1615953689348_%5Cu4eba%5Cu8cc7%5Cu7cfb%5Cu7d71%5Cu64cd%5Cu4f5c%5Cu624b%5Cu518a.pdf\" target=\"_break\">下載附件</a>\t
+																																									</div>
+																																								</div>
+																																								<div>\t
+																																									<span>\t\t
+																																										<img src=\"/servlet/jform?step=download&file=hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg&filename=babylon%2Ffiles%2FB.2.%5Cu516c%5Cu544a%5Cu5167%5Cu5bb9%5Cu7dad%5Cu8b77%2F1603948117409_kdan_logo.png\">\t
+																																										</span>\t
+																																										<span>\t\t
+																																											<div>公司組織圖<
+/div>\t
+																																											</span>\t
+																																											<div>\t\t
+																																												<a href=\"/servlet/jform?step=download&file=hrm8airw.pkg;hrm_98592865327356822677.cfg,hrm8w.pkg,briefcase.pkg&filename=babylon%2Ffiles%2FB.2.%5Cu516c%5Cu544a%5Cu5167%5Cu5bb9%5Cu7dad%5Cu8b77%2F1608109640114_%5Cu7d44%5Cu7e54%5Cu67b6%5Cu69cb%5Cu571620200901+%28Kenny%5Cu7c3d%5Cu540d%29.pdf\" target=\"_break\">下載附件</a>\t
+																																											</div>
+																																										</div>
+																																									</div>\r\n                
+																																								</span>\r\n            
+																																							</div>\r\n        
+																																						</div>\r\n\t\t\r\n\t\t
+																																						<!--主管專區-->\r\n\t\t
+																																						<div id=\"supervisor\" data-info='{\"show\":false}'>\r\n\t\t\t
+																																							<div class=\"title\">主管專區</div>\r\n\t\t\t
+																																							<span class=\"CA\"  data-info='{\"chart_title\":\"員工
+出勤統計\",\"chart_data\":[[\"應出勤人數\",\"1\"],[\"請假人數\",\"0\"],[\"出差(外出)人數\",\"0\"]]}'>\r\n\t\t\t\t
+																																								<div class=\"jump\">\r\n\t\t\t\t\t
+																																									<span class=\"prevM\">＜</span>\r\n\t\t\t\t\t
+																																									<span class=\"date\"></span>\r\n\t\t\t\t\t
+																																									<span class=\"nextM\">＞</span>\r\n\t\t\t\t
+																																								</div>            \r\n\t\t\t\t
+																																								<table>\r\n\t\t\t\t\t
+																																									<tr>\r\n\t\t\t\t\t\t
+																																										<th>日</th>\r\n\t\t\t\t\t\t
+																																										<th>一</th>\r\n\t\t\t\t\t\t
+																																										<th>二</th>\r\n\t\t\t\t\t\t
+																																										<th>三</th>\r\n\t\t\t\t\t\t
+																																										<th>四</th>\r\n\t\t\t\t\t\t
+																																										<th>五</th>\r\n\t\t\t\t\t\t
+																																										<th>六</th>\r\n\t\t\t\t\t
+																																									</tr>\r\n\t\t\t\t\t\r\n\t\t\t\t\t
+																																									<tr>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t
+																																									</tr>\r\n\t\t\t\t\t 
+																																									<tr>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t
+																																									</tr>\r\n\t\t\t\t\t 
+																																									<tr>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t
+																																									</tr>\r\n\t\t\t\t\t 
+																																									<tr>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t
+																																									</tr>\r\n\t\t\t\t\t 
+																																									<tr>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t
+																																									</tr>\r\n\t\t\t\t\t
+																																									<tr>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t\t
+																																										<td></td>\r\n\t\t\t\t\t
+																																									</tr>\r\n\t\t\t\t
+																																								</table>\r\n\t\t\t
+																																							</span>\r\n\t\t\t
+																																							<span class=\"CB\"  data-info='[[\"到職(0)\",[[\"單位代碼\",\"單位名稱\",\"員工編號\",\"員工姓名\"]]],[\"離職(0)\",[[\"單位代碼\",\"單位名稱\",\"員工編號\",\"員工姓名\"]]],[\"留
+停(0)\",[[\"單位代碼\",\"單位名稱\",\"員工編號\",\"員工姓名\",\"留停起日\",\"留停迄日\"]]],[\"請假(0)\",[[\"單位代碼\",\"單位名稱\",\"員工編號\",\"員工姓名\",\"英文姓名\",\"假別\",\"請假起日\",\"請假起時\",\"請假迄日\",\"請假迄時\",\"共計\"]]],[\"加班(0)\",[[\"單位代碼\",\"單位名稱\",\"員工編號\",\"員工姓名\"]]],[\"出差(0)\",[[\"類別\",\"單位代碼\",\"單位名稱\",\"員工編號\",\"員工姓名\",\"出差起日\",\"出差起時\",\"出差迄日\",\"出差迄時\",\"地點\"]]],[\"應刷未刷(0)\",[[\"單位代碼\",\"單位名稱\",\"員工編號\",\"員工姓名\"]]]]'>\r\n\t\t\t\t
+																																								<div class=\"day\"></div>\r\n\t\t\t\t
+																																								<div>\r\n\t\t\t\t\t
+																																									<span id=\"chart\" style=\"width: 350px; height: 300px\"></span>\r\n\t\t\t\t\t
+																																									<div id=\"SUT\"></div>\r\n\t\t\t\t
+																																								</div>\r\n\t\t\t
+																																							</span>\r\n\t\t
+																																						</div>\r\n\t\t\r\n    
+																																					</div>\r\n
+																																				</div>\r\n\r\n
+																																				<div id=\"translate\">\r\n\t
+																																					<span>出勤概況</span>\r\n\t
+																																					<span>目前尚無資料!</span>\r\n\t
+																																					<span>請稍後...</span>\r\n\t
+																																					<span>無法獲取GPS定位!</span>\r\n\t
+																																					<span>您的
+瀏覽器不支援GPS定位!</span>\r\n\t
+																																					<span>沒有這項功能!</span>\r\n\t
+																																					<span>快速選單設定</span>\r\n\t
+																																					<span>儲存設定</span>\r\n\t
+																																					<span>下載附件</span>\r\n\t
+																																					<span>上月</span>\r\n\t
+																																					<span>本月</span>\r\n\t
+																																					<span>下月</span>\r\n\t
+																																					<span>預定加班申請</span>\r\n\t
+																																					<span>實際加班單</span>\r\n\t
+																																					<span>查詢自評</span>\r\n\t
+																																					<span>我要自評</span>\r\n
+																																				</div>\r\n
+																																			</form>\r\n
+																																			<script type=\"text/javascript\">\r\nCMC.hview=true;\r\n</script>\r\n
+																																		</div>\r\n\r\n        
+																																	</div>\r\n    
+																																</div>\r\n    
+																																<div id=\"footer\">\r\n        
+																																	<span></span>\r\n    
+																																</div>\r\n
+																															</body>\r\n
+																															<!-- TIME 125 (ms) -->\r\n"
