@@ -8,6 +8,6 @@ class LineApi
       resp = REQUESTER.http_send(:get, path, {}, headers)
       raise "Fetch profile fail: #{resp['message']}" unless resp['status'] == 200
       resp
-    end
+    end    
   end
 end

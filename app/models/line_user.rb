@@ -24,6 +24,7 @@ class LineUser < ApplicationRecord
     cookie = HrSystem.sign_in(account, password)
     self.update(cookie: cookie)
     self.login!
+    RichMenu.find_by(name: 'after_login').link_user_rich_menu(self.line_id)
   rescue Exception
     self.update(account: nil, password: nil)
     self.none_login!
