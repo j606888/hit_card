@@ -44,7 +44,6 @@ class LineBot < ServiceCaller
         message = FlexMessage.record(@line_user.name, @line_user.account, record[:card_in], record[:card_out], record[:all_cards])
         resp = $line_client.reply_message(@reply_token, message)
       when '異常'
-        
         message = FlexMessage.error_info(@line_user.name, @line_user.account, @line_user.error_info)
         resp = $line_client.reply_message(@reply_token, message)
       end

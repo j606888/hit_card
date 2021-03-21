@@ -211,7 +211,7 @@ class FlexMessage
           },
           {
             type: "text",
-            text: "20200318",
+            text: error[:date],
             size: "lg",
             align: "center",
             margin: "md",

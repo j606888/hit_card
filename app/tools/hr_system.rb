@@ -61,6 +61,7 @@ class HrSystem
       result = data['attendError'].map do |date, value|
         next if date == 'count'
         {
+          date: date,
           card_in: value['in'],
           card_out: value['out'],
           message: value['error']
