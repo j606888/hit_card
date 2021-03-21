@@ -2,6 +2,13 @@ class LineUser < ApplicationRecord
   enum plan: { free: 0, premium: 1, enterprise: 2 }
   enum mode: { none_login: 0, account_mode: 1, password_mode: 2, login: 3 }
 
+  LOCARION_RANGE = {
+    x_min: 22.9987352,
+    x_max: 22.9990040,
+    y_min: 120.2335215,
+    y_max: 120.2346388
+  }
+
   def self.fetch_by_line_id(line_id)
     line_user = self.find_or_initialize_by(line_id: line_id)
     return line_user unless line_user.new_record?
@@ -23,9 +30,22 @@ class LineUser < ApplicationRecord
   end
 
   def clock_in
-    resp = HrSystem.clock_in(self.cookie)
+    resp = HrSystem.clock_in(self.cookie, random_location)
     true
   rescue Exception
     false
+  end
+
+  def clock_time
+    HrSystem.clock_time(self.cookie)
+  end
+
+  def random_location
+    x = LOCARION_RANGE[:x_min] + (LOCARION_RANGE[:x_max] - LOCARION_RANGE[:x_min]) * rand()
+    y = LOCARION_RANGE[:y_min] + (LOCARION_RANGE[:y_max] - LOCARION_RANGE[:y_min]) * rand()
+    {
+      x: x.round(7),
+      y: y.round(7)
+    }
   end
 end

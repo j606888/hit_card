@@ -31,15 +31,20 @@ class LineBot < ServiceCaller
         reply_message("Sorry, login failed. Please enter 'login' and try again.")
       end
     when 'login'
-      if @message == '打卡'
+      case @message
+      when '打卡'
         result = @line_user.clock_in
         if result
           reply_message("Clock in Success!")
         else
           reply_message("Oops, clock in Failed...")
         end
+      when '查看'
+        result = @line_user.clock_time
+        message = "Today's clock record：\n" + result.map { |key, value| "#{key}: #{value}"}.join("\n")
+        reply_message(message)
       else
-        reply_message("Please enter '打卡' to clock in")
+        reply_message("Enter '打卡' to clock in\nEnter '查看' to check todays record")
       end
     end
   end
