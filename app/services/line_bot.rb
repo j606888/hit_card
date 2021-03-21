@@ -32,16 +32,21 @@ class LineBot < ServiceCaller
     when 'login'
       case @message
       when '打卡'
-        result = @line_user.clock_in
-        if result
-          reply_message("打卡成功！")
+        location = @line_user.clock_in
+        if location
+          message = FlexMessage.hit_success(@line_user.name, @line_user.account, location, Time.now.in_time_zone('Taipei').strftime("%H:%M"))
+          $line_client.reply_message(@reply_token, message)
         else
           reply_message("打卡失敗...")
         end
       when '紀錄'
-        reply_message(@line_user.clock_time)
+        record = @line_user.clock_time
+        message = FlexMessage.record(@line_user.name, @line_user.account, record[:card_in], record[:card_out], record[:all_cards])
+        resp = $line_client.reply_message(@reply_token, message)
       when '異常'
-        reply_message(@line_user.error_info)
+        
+        message = FlexMessage.error_info(@line_user.name, @line_user.account, @line_user.error_info)
+        resp = $line_client.reply_message(@reply_token, message)
       end
     end
   end

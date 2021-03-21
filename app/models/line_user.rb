@@ -31,8 +31,9 @@ class LineUser < ApplicationRecord
   end
 
   def clock_in
-    resp = HrSystem.clock_in(self.cookie, random_location)
-    true
+    location = random_location
+    resp = HrSystem.clock_in(self.cookie, location)
+    "#{location[:x]}, #{location[:y]}"
   rescue Exception
     false
   end

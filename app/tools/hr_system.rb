@@ -60,10 +60,14 @@ class HrSystem
       data = JSON.parse(short)
       result = data['attendError'].map do |date, value|
         next if date == 'count'
-        "[#{date}] in: #{value['in']}, out: #{value['out']}, error: #{value['error']}"
+        {
+          card_in: value['in'],
+          card_out: value['out'],
+          message: value['error']
+        }
       end
 
-      result.compact.join("\n")
+      result.compact
     end
 
     def clock_time(cookie)
@@ -82,11 +86,11 @@ class HrSystem
       result = resp.match(regex)[0]
       hash = JSON.parse(result)
 
-      [
-        "進卡：#{hash['in_card']}",
-        "出卡：#{hash['out_card']}",
-        "所有紀錄：#{hash['other_card_record'].split(' ').map { |time| time.insert(2, ':')}.join(', ')}"
-      ].join("\n")
+      {
+        card_in: hash['in_card'],
+        card_out: hash['out_card'],
+        all_cards: hash['other_card_record']
+      }
     end
 
     def clock_in_list(cookie)
